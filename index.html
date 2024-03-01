@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" async></script>
+    <script src="app.js" async></script>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
+    <title>Encryptor</title>
+</head>
+<body>
+    <header>
+        <h1>Encryptor.</h1>
+        
+    </header>
+    
+    <main>
+        
+        <div class="box-main">
+            <div class="box-mainTextArea">
+                <textarea  placeholder="Ingrese el texto que desea encriptar o desencriptar aqui..." class="TextArea-TextToEncrypt" id="IdTextToEncrypt" name="TextToEncrypt"  cols="30" rows="10" pattern="/([^a-zñ\d\s])g/" ></textarea>
+                <div class="box-buttonsAndLabel">
+                    <label class="lebel-buttons" for="two-buttons"> <span class="material-symbols-outlined">
+                        error
+                        </span> Evita el uso de letras mayúsculas, acentos o caracteres especiales en tu texto.</label>
+                    <div id="two-buttons" class="boxTwo-buttons">
+                        <button onclick="getTextEncrypt()" class="btn-blue">Encriptar</button>
+                        <button onclick="getdecryptText()" class="btn-lightBlue">Desencriptar</button>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="box-encryptedText">
+                <div class="box-Messages">
+                    <img class="img-notFoundText" src="img/No-data-rafiki.svg" alt="My Happy SVG" />
+                    <div class="box-Text-Message">
+                        <h2>Ningun mensaje digitado</h2>
+                        <p>Ingrese el texto que desea encriptar o desencriptar.</p>
+                    </div>  
+                </div>
+                <div class="box-TextArea">
+                    <textarea  readonly class="TextArea-encryptedText"name="EncryptedText"  cols="30" rows="10"></textarea>
+                </div>
+                <div class="box-OneButtonAndLabel">
+                    <label class="lebel-buttons" for="button"> <span class="material-symbols-outlined">
+                        error
+                        </span>Copie el siguiente texto para encriptarlo.</label>
+                    <div id="button" class="boxOne-button">
+                        <button onclick="copyText()" class="btn-blue">Copiar</button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p class="copyright">© Made by <b>Diego Reyna</b> - 2024</p>
+    </footer>
+    
+</body>
+</html>
